@@ -13,7 +13,7 @@ const App = () => {
 
   const numSections = 5;
   const sectionHeight = 100;
-  const scrollDelay = 1000;
+  const scrollDelay = 500;
   let touchStartY;
 
   const sections = [
@@ -73,7 +73,6 @@ const App = () => {
   const sectionStyles = {
     height: `${numSections * sectionHeight}vh`,
     transform: `translateY(-${activeSection * sectionHeight}vh)`,
-    transition: "transform 0.55s ease-in-out",
     overflowY: "hidden",
   };
 
