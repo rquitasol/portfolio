@@ -1,0 +1,27 @@
+/* Header.css */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Set a higher z-index value */
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.header li {
+  cursor: pointer;
+}
+
+.header li.active {
+  font-weight: bold;
+}
