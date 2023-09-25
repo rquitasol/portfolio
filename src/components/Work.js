@@ -1,21 +1,25 @@
 import React from "react";
 
 const Work = () => {
-  const divStyle = {
-    textAlign: "center", // Center align text
-    backgroundColor: "green", // Background color
-    height: "100vh", // Set height to 100vh for full viewport height
-    width: "100%", // Set width to 100% for full viewport width
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
   return (
-    <div style={divStyle}>
-      <h1>Work</h1>
-      <p>Content for Work goes here.</p>
+    <div className="section">
+      <div className="hero min-h-screen bg-secondary">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <img
+            src="/images/stock/photo-1635805737707-575885ab0820.jpg"
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">Work Experience!</h1>
+            <p className="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

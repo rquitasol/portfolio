@@ -1,21 +1,28 @@
 import React from "react";
 
 const Projects = () => {
-  const divStyle = {
-    textAlign: "center", // Center align text
-    backgroundColor: "orange", // Background color
-    height: "100vh", // Set height to 100vh for full viewport height
-    width: "100%", // Set width to 100% for full viewport width
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
   return (
-    <div style={divStyle}>
-      <h1>Projects</h1>
-      <p>Content for Projects goes here.</p>
+    <div className="section">
+      <div
+        className="hero min-h-screen"
+        style={{
+          backgroundImage:
+            "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Future Projects</h1>
+            <p className="mb-5">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
