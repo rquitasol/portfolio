@@ -1,12 +1,14 @@
 import React from "react";
+import temp2 from "../assets/temp2.gif";
 
 const Work = () => {
   return (
     <div className="section">
-      <div className="hero min-h-screen bg-secondary">
+      <div className="hero min-h-screen bg-accent">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="/images/stock/photo-1635805737707-575885ab0820.jpg"
+            src={temp2}
+            alt="temp2"
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>

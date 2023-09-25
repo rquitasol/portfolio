@@ -68,6 +68,7 @@ const App = () => {
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
     };
+    // eslint-disable-next-line
   }, [activeSection, isScrolling]);
 
   const sectionStyles = {

@@ -35,9 +35,9 @@ const Contact = () => {
                   className="input input-bordered"
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
+                  <p className="label-text-alt link link-hover">
                     Forgot password?
-                  </a>
+                  </p>
                 </label>
               </div>
               <div className="form-control mt-6">
