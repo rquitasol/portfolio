@@ -13,25 +13,31 @@ const Header = ({ activeSection, setActiveSection }) => {
           className={activeSection === 0 ? "active" : ""}
           onClick={() => handleNavigation(0)}
         >
-          Section 1
+          Home
         </li>
         <li
           className={activeSection === 1 ? "active" : ""}
           onClick={() => handleNavigation(1)}
         >
-          Section 2
+          About
         </li>
         <li
           className={activeSection === 2 ? "active" : ""}
           onClick={() => handleNavigation(2)}
         >
-          Section 3
+          Work
         </li>
         <li
           className={activeSection === 3 ? "active" : ""}
           onClick={() => handleNavigation(3)}
         >
-          Section 4
+          Projects
+        </li>
+        <li
+          className={activeSection === 4 ? "active" : ""}
+          onClick={() => handleNavigation(4)}
+        >
+          Contact
         </li>
       </ul>
     </div>
