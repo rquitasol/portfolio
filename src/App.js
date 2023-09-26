@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./components/Home";
 import About from "./components/About";
 import Work from "./components/Work";
 import Projects from "./components/Projects";
@@ -11,17 +10,16 @@ const App = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
 
-  const numSections = 5;
+  const numSections = 4;
   const sectionHeight = 100;
   const scrollDelay = 500;
   let touchStartY;
 
   const sections = [
-    <Home key={1} />,
-    <About key={2} />,
-    <Work key={3} />,
-    <Projects key={4} />,
-    <Contact key={5} />,
+    <About key={1} />,
+    <Work key={2} />,
+    <Projects key={3} />,
+    <Contact key={4} />,
   ];
 
   const handleScroll = (event) => {
