@@ -19,11 +19,12 @@ const About = () => {
     alert("TODO DOWNLOAD LINK OF RESUME");
   };
 
-  const buttonStyle = "btn bg-stone-800 text-base-100";
+  const buttonStyle = "btn bg-primary text-base-100";
+  const keyWords = "font-extrabold";
   return (
     <div className="section">
       <div
-        className="hero min-h-screen"
+        className="hero min-h-screen bg-primary"
         style={{
           backgroundImage: `url(${pfp})`,
         }}
@@ -35,8 +36,11 @@ const About = () => {
             <p className="py-6 text-2xl font-medium ">
               I'm a web developer based in the Philippines with years of
               experience working with languages and tools such as
-              <b> Java</b>, <b>JavaScript</b> , <b>Apex</b> , <b>CSS</b>,{" "}
-              <b>HTML</b> and more.
+              <b className={keyWords}> Java </b> ,
+              <b className={keyWords}>JavaScript </b> ,
+              <b className={keyWords}>Apex </b>,<b className={keyWords}>CSS </b>
+              ,<b className={keyWords}>HTML </b>
+              and more.
               <br /> I've had the privilege of developing and working on
               websites for various industries, including finance, online gaming,
               health and wellness, and more. These experiences have given me the
