@@ -11,12 +11,12 @@ const Header = ({ activeSection, setActiveSection }) => {
   return (
     <div className="navbar header bg-stone-800 opacity-90 font-mova ">
       <div className="navbar-start">
-        <a
+        <p
           className="btn btn-ghost normal-case text-5xl ml-10 text-base-300"
           onClick={() => handleNavigation(0)}
         >
           romelquitasol
-        </a>
+        </p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-2xl ">
