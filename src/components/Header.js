@@ -11,28 +11,25 @@ const Header = ({ activeSection, setActiveSection }) => {
   return (
     <div className="navbar header bg-stone-800 opacity-90 font-mova ">
       <div className="navbar-start">
-        <a
+        <p
           className="btn btn-ghost normal-case text-5xl ml-10 text-base-300"
           onClick={() => handleNavigation(0)}
         >
           romelquitasol
-        </a>
+        </p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-2xl ">
-          {/* <li onClick={() => handleNavigation(0)}>
-            <p>Home</p>
-          </li> */}
-          <li className="px-5" onClick={() => handleNavigation(1)}>
+          <li className="px-5" onClick={() => handleNavigation(0)}>
             <p className={titleHoverStyle}>About</p>
           </li>
-          <li className="px-5" onClick={() => handleNavigation(2)}>
+          <li className="px-5" onClick={() => handleNavigation(1)}>
             <p className={titleHoverStyle}>Work</p>
           </li>
-          <li className="px-5" onClick={() => handleNavigation(3)}>
+          <li className="px-5" onClick={() => handleNavigation(2)}>
             <p className={titleHoverStyle}>Projects</p>
           </li>
-          <li className="px-5" onClick={() => handleNavigation(4)}>
+          <li className="px-5" onClick={() => handleNavigation(3)}>
             <p className={titleHoverStyle}>Contact</p>
           </li>
         </ul>
@@ -60,19 +57,16 @@ const Header = ({ activeSection, setActiveSection }) => {
             tabIndex={0}
             className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-stone-800 rounded-md text-2xl w-52"
           >
-            {/* <li onClick={() => handleNavigation(0)}>
-              <p>Home</p>
-            </li> */}
-            <li onClick={() => handleNavigation(1)}>
+            <li onClick={() => handleNavigation(0)}>
               <p className={titleHoverStyle}>About</p>
             </li>
-            <li onClick={() => handleNavigation(2)}>
+            <li onClick={() => handleNavigation(1)}>
               <p className={titleHoverStyle}>Work</p>
             </li>
-            <li onClick={() => handleNavigation(3)}>
+            <li onClick={() => handleNavigation(2)}>
               <p className={titleHoverStyle}>Projects</p>
             </li>
-            <li onClick={() => handleNavigation(4)}>
+            <li onClick={() => handleNavigation(3)}>
               <p className={titleHoverStyle}>Contact</p>
             </li>
           </ul>
