@@ -1,48 +1,144 @@
-import React from "react";
+import React, { useState } from "react";
+import linkedin from "../assets/linkedin.png";
+import github from "../assets/github.png";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [showAlert, setShowAlert] = useState(false);
+  const [emailDialogMessage, setEmailDialogMessage] = useState("");
+  const [alertClass, setAlertClass] = useState("alert-success");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          setAlertClass("alert-success");
+          setEmailDialogMessage("Email sent successfully!");
+          setShowAlert(true);
+        },
+        (error) => {
+          setAlertClass("alert-error");
+          setEmailDialogMessage("Email sending failed!");
+          setShowAlert(true);
+        }
+      )
+      .finally(
+        setTimeout(() => {
+          setShowAlert(false);
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+        }, 5000)
+      );
+  };
+
+  const redirectToLinkedIn = () => {
+    const websiteURL = "https://www.linkedin.com/in/romelquitasol/";
+    window.open(websiteURL, "_blank");
+  };
+
+  const redirectToGitHub = () => {
+    const websiteURL = "https://github.com/rquitasol";
+    window.open(websiteURL, "_blank");
+  };
+
+  const buttonStyle = "btn bg-primary text-base-100 mr-2";
+
   return (
     <div className="section">
-      <div className="hero min-h-screen bg-accent">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero min-h-screen bg-primary text-secondary text-lg">
+        <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Contact me!</h1>
+            <h1 className="text-5xl font-bold">Send me a message!</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Got a question or proposal, or just want to say hello?
+              <br />
+              You can also contact me through these platforms
             </p>
+            <button className={buttonStyle} onClick={redirectToLinkedIn}>
+              <img src={linkedin} alt="LinkedIn" className="w-6 h-6 mr-2" />
+              LinkedIn
+            </button>
+            <button className={buttonStyle} onClick={redirectToGitHub}>
+              <img src={github} alt="GitHub" className="w-6 h-6 mr-2" />
+              GitHub
+            </button>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 text-black">
             <div className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-                <label className="label">
-                  <p className="label-text-alt link link-hover">
-                    Forgot password?
-                  </p>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
-              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="form-control">
+                  {showAlert && (
+                    <div className={`alert ${alertClass}`}>
+                      <span>{emailDialogMessage}</span>
+                    </div>
+                  )}
+                  <label className="label" htmlFor="name">
+                    <span className="label-text">Your name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="name"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    className="input input-bordered"
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label" htmlFor="email">
+                    <span className="label-text">Email Address</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="input input-bordered"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label" htmlFor="message">
+                    <span className="label-text">Message</span>
+                  </label>
+                  <textarea
+                    className="textarea textarea-bordered w-full"
+                    rows="5"
+                    placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="form-control mt-6">
+                  <button className="btn btn-primary">Send</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
