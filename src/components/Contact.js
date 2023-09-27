@@ -3,7 +3,7 @@ import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import emailjs from "emailjs-com";
 
-const Contact = () => {
+const Contact = ({ isDesktop }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -70,11 +70,20 @@ const Contact = () => {
       <div className="hero min-h-screen bg-primary text-secondary text-lg">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Send me a message!</h1>
-            <p className="py-6">
-              Got a question or proposal, or just want to say hello?
-              <br />
-              You can also contact me through these platforms
+            <h1
+              className={`font-extrabold  ${
+                isDesktop ? "header-desktop" : "header-mobile"
+              }`}
+            >
+              Send me a message!
+            </h1>
+            <p
+              className={`py-6 font-medium 
+             ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
+            `}
+            >
+              Got a question or proposal, or just want to say hello? You can
+              also contact me through these platforms
             </p>
             <button className={buttonStyle} onClick={redirectToLinkedIn}>
               <img src={linkedin} alt="LinkedIn" className="w-6 h-6 mr-2" />
@@ -127,7 +136,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     className="textarea textarea-bordered w-full"
-                    rows="5"
+                    rows={isDesktop ? "5" : "3"}
                     placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
                     id="message"
                     name="message"

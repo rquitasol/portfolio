@@ -2,3 +2,23 @@
   font-family: "Mova";
   src: url("./assets/mova.otf") format("opentype"); /* for OTF */
 }
+
+.header-desktop {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.header-mobile {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.paragraph-desktop {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.paragraph-mobile {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}

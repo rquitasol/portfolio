@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         mova: ["mova", "sans"],
       },
+
+      spacing: {
+        700: "700px",
+      },
     },
   },
   daisyui: {
