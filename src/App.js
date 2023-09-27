@@ -5,10 +5,12 @@ import About from "./components/About";
 import Work from "./components/Work";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import { useMediaQuery } from "react-responsive";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
   const numSections = 4;
   const sectionHeight = 100;
@@ -16,7 +18,7 @@ const App = () => {
   let touchStartY;
 
   const sections = [
-    <About key={1} />,
+    <About key={1} isDesktop={isDesktop} />,
     <Work key={2} />,
     <Projects key={3} />,
     <Contact key={4} />,
