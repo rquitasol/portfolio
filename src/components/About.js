@@ -75,6 +75,10 @@ const About = ({ isDesktop }) => {
                   <img src={github} alt="GitHub" className="w-6 h-6 mr-2" />
                   GitHub
                 </button>
+                <button className={buttonStyle} onClick={downloadResume}>
+                  <img src={resume} alt="Resume" className="w-6 h-6 mr-2" />
+                  Resume
+                </button>
               </>
             ) : (
               <>
