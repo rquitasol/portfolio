@@ -1,79 +1,85 @@
 import React from "react";
-import temp from "../assets/temp.jpg";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "../style/Carousel.css";
+import { Chrono } from "react-chrono";
+
 const Work = ({ isDesktop }) => {
-  const workData = [
+  const items = [
     {
-      company: "iScale Solution",
-      position: "Software Engineer",
-      project: "Salesforce",
-      info: 'Create major features requested by the Product Manager to be presented to the client.Demo of newly created feature to Product Manager to getfeedback on the requested feature.Fix bugs reported by teamCode review done by other teammatesCreate automation test using Selenium"',
+      title: "2011",
+      cardTitle: "Central Philippines Univesity",
+      cardSubtitle: "Bachelor of Science in Information Technology",
+      cardDetailedText:
+        'Create major features requested by the Product Manager to be presented to the client.Demo of newly created feature to Product Manager to getfeedback on the requested feature.Fix bugs reported by teamCode review done by other teammatesCreate automation test using Selenium"',
     },
 
     {
-      company: "Zennya",
-      position: "Backend Developer",
-      project: "Zennya API",
-      info: "Developed APIs for mobile and web applications.Researched, documented and implemented proof of conceptsto be used as new features. Provided documentation for new api endpoints and new featuresimplemented. Participated in meetings and logged daily progress in Jira",
+      title: "Zennya",
+      cardTitle: "Backend Developer",
+      cardSubtitle: "Zennya API",
+      cardDetailedText:
+        "Developed APIs for mobile and web applications.Researched, documented and implemented proof of conceptsto be used as new features. Provided documentation for new api endpoints and new featuresimplemented. Participated in meetings and logged daily progress in Jira",
     },
 
     {
-      company: "GreatFeat Services Inc.",
-      position: "Software Developer",
-      project: "Online Gaming App",
-      info: "Developed web service to manage new game platforms Participated in team meetings, requirement gathering for new features Modified fields and structure of database for optimization.",
+      title: "GreatFeat Services Inc.",
+      cardTitle: "Software Developer",
+      cardSubtitle: "Online Gaming App",
+      cardDetailedText:
+        "Developed web service to manage new game platforms Participated in team meetings, requirement gathering for new features Modified fields and structure of database for optimization.",
+    },
+    {
+      title: "iScale Solution",
+      cardTitle: "Software Engineer",
+      cardSubtitle: "Salesforce",
+      cardDetailedText:
+        'Create major features requested by the Product Manager to be presented to the client.Demo of newly created feature to Product Manager to getfeedback on the requested feature.Fix bugs reported by teamCode review done by other teammatesCreate automation test using Selenium"',
+    },
+
+    {
+      title: "Zennya",
+      cardTitle: "Backend Developer",
+      cardSubtitle: "Zennya API",
+      cardDetailedText:
+        "Developed APIs for mobile and web applications.Researched, documented and implemented proof of conceptsto be used as new features. Provided documentation for new api endpoints and new featuresimplemented. Participated in meetings and logged daily progress in Jira",
+    },
+
+    {
+      title: "GreatFeat Services Inc.",
+      cardTitle: "Software Developer",
+      cardSubtitle: "Online Gaming App",
+      cardDetailedText:
+        "Developed web service to manage new game platforms Participated in team meetings, requirement gathering for new features Modified fields and structure of database for optimization.",
     },
   ];
 
-  const workCardMap = workData.map((data) => {
-    return (
-      <div className="card lg:card-side bg-base-100 shadow-xl text-primary">
-        <figure>
-          <img src={temp} alt="Album" className="max-w-[400px] max-h-[400px]" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-2xl lg:text-3xl xl:text-4xl">
-            {data.company}
-          </h2>
-          <p className="text-sm lg:text-base xl:text-lg">
-            {`POSITION: ${data.position}`} <br />
-            {`PROJECT: ${data.project}`} <br />
-            {`INFO: ${data.info}`} <br />
-          </p>
-        </div>
-      </div>
-    );
-  });
-
   return (
-    <div className=" min-h-screen bg-primary text-secondary">
-      <div className="hero-content  min-w-screen max-w-full">
-        <div className="carousel-container min-h-screen">
-          <div>
-            <h1
-              className={` font-extrabold  pb-10
-              ${isDesktop ? "header-desktop pt-40" : "header-mobile pt-20"}
-              `}
-            >
-              Professional Experience
-            </h1>
-            <Carousel
-              showThumbs={true}
-              showStatus={false}
-              infiniteLoop={true}
-              className="carousel-full-screen"
-            >
-              {workCardMap.map((card, index) => (
-                <div
-                  key={index}
-                  className="carousel-slide-content flex justify-center items-center"
-                >
-                  {card}
-                </div>
-              ))}
-            </Carousel>
+    <div className="section">
+      <div className="hero min-h-screen bg-accent text-neutral flex">
+        <div className="hero-content  min-w-full">
+          <div className="h-screen w-full min-h-screen items-center pt-20">
+            <h1 className="mb-5 text-5xl font-bold pb-10">Work Experience</h1>
+            {isDesktop ? (
+              <Chrono
+                items={items}
+                mode="HORIZONTAL"
+                cardWidth={450}
+                cardHeight={300}
+                contentDetailsHeight={100}
+                enableOutline
+                showAllCardsHorizontal
+                itemWidth={500}
+              />
+            ) : (
+              <Chrono
+                items={items}
+                mode="HORIZONTAL"
+                cardWidth={300}
+                cardHeight={300}
+                contentDetailsHeight={100}
+                enableOutline
+                showSingle
+                itemWidth={300}
+              />
+            )}
           </div>
         </div>
       </div>

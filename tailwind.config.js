@@ -16,10 +16,10 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#292524",
-          secondary: "#FFFFFF",
-          accent: "#fde68a",
-          neutral: "#2b3440",
+          primary: "#FF6000",
+          secondary: "#FFA559",
+          accent: "#FFE6C7",
+          neutral: "#454545",
           "base-100": "#ffffff",
           info: "#3abff8",
           success: "#36d399",
@@ -27,6 +27,9 @@ module.exports = {
           error: "#f87272",
         },
       },
+      "luxury",
+      "light",
+      "cyberpunk",
     ],
   },
   plugins: [require("daisyui")],

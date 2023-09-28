@@ -19,9 +19,9 @@ const App = () => {
 
   const sections = [
     <About key={1} isDesktop={isDesktop} />,
-    <Work key={2} />,
-    <Projects key={3} />,
-    <Contact key={4} />,
+    <Work key={2} isDesktop={isDesktop} />,
+    <Projects key={3} isDesktop={isDesktop} />,
+    <Contact key={4} isDesktop={isDesktop} />,
   ];
 
   const handleScroll = (event) => {

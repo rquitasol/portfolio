@@ -9,10 +9,10 @@ const Header = ({ activeSection, setActiveSection }) => {
   const titleHoverStyle = "hover:bg-base-300";
 
   return (
-    <div className="navbar header bg-stone-800 opacity-90 font-mova ">
+    <div className="navbar header bg-neutral opacity-90 font-mova ">
       <div className="navbar-start">
         <p
-          className="btn btn-ghost normal-case text-5xl ml-10 text-base-300"
+          className="btn btn-ghost normal-case text-5xl ml-10 text-primary"
           onClick={() => handleNavigation(0)}
         >
           romelquitasol
