@@ -1,5 +1,5 @@
 import React from "react";
-import pfp from "../assets/pfp.jpg";
+import pfp from "../assets/pfp.png";
 import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import resume from "../assets/resume.png";
@@ -19,8 +19,8 @@ const About = ({ isDesktop }) => {
     alert("TODO DOWNLOAD LINK OF RESUME");
   };
 
-  const buttonStyle = "btn bg-primary text-secondary";
-  const keyWords = "font-extrabold";
+  const buttonStyle = "btn bg-neutral text-base-100";
+  const keyWords = "font-extrabold underline decoration-secondary";
 
   return (
     <div className="section">
@@ -37,14 +37,14 @@ const About = ({ isDesktop }) => {
         >
           <div>
             <h1
-              className={` font-extrabold font-mova 
+              className={` font-extrabold font-mova  uppercase 
               ${isDesktop ? "header-desktop" : "header-mobile"}
               `}
             >
-              HI, I'M ROMEL
+              Hi, I'm Romel
             </h1>
             <p
-              className={`py-6 font-medium 
+              className={`py-6 font-medium  indent-8
              ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
             `}
             >
@@ -54,16 +54,13 @@ const About = ({ isDesktop }) => {
               <b className={keyWords}> JavaScript</b>,
               <b className={keyWords}> Apex</b>,<b className={keyWords}> CSS</b>
               ,<b className={keyWords}> HTML </b>
-              and more.
-              <br />
-              Over the years, I have had the privilege of working on
+              and more. Over the years, I have had the privilege of working on
               applications across various industries, including Finance, Online
               Gaming, Health and Wellness, Customer Relationship Management.
               These diverse experiences have allowed me to collaborate with both
               small and large companies, fostering a rich cross-cultural
-              environment.
-              <br />I am actively seeking a new role as a developer to further
-              expand my skills and contribute to exciting projects.
+              environment. I am actively seeking a new role as a developer to
+              further expand my skills and contribute to exciting projects.
             </p>
             {isDesktop ? (
               <>
