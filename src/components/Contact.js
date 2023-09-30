@@ -72,7 +72,7 @@ const Contact = ({ isDesktop }) => {
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <h1
-              className={`font-FuturaPTHeavy text-base-200  ${
+              className={`font-FuturaPTHeavy text-base-200 text-4xl  ${
                 isDesktop ? "header-desktop" : "header-mobile"
               }`}
             >
