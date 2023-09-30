@@ -1,6 +1,29 @@
 @font-face {
-  font-family: "Mova";
-  src: url("./assets/mova.otf") format("opentype"); /* for OTF */
+  font-family: "FuturaPTExtraBold";
+  src: url("../src/assets/fonts/FuturaPTExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url("../src/assets/fonts/FuturaPTHeavy.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPTMedium";
+  src: url("../src/assets/fonts/FuturaPTMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FuturaPTLight";
+  src: url("../src/assets/fonts/FuturaPTLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 .header-desktop {
@@ -21,4 +44,12 @@
 .paragraph-mobile {
   font-size: 1rem; /* 16px */
   line-height: 1.5rem; /* 24px */
+}
+
+.btn:hover {
+  background-color: #ff6000;
+}
+
+.p:hover {
+  background-color: #ff6000;
 }
