@@ -1,20 +1,24 @@
 import React from "react";
 import "../style/Header.css";
 
-const Header = ({ activeSection, setActiveSection }) => {
+const Header = ({ isDesktop, activeSection, setActiveSection }) => {
   const handleNavigation = (sectionIndex) => {
     setActiveSection(sectionIndex);
   };
 
-  const titleHoverStyle = "hover:bg-primary";
+  const titleHoverStyle = "hover:bg-secondary";
 
   return (
     <div className="navbar header font-FuturaPTHeavy bg-neutral ">
       <div className="navbar-start">
         <p
-          className="btn btn-ghost normal-case text-5xl ml-10 text-primary"
+          className={`btn btn-ghost normal-case text-5xl text-primary mb-5 font-FuturaPTExtraBold ${
+            isDesktop ? "ml-80" : "ml-5 "
+          } `}
           onClick={() => handleNavigation(0)}
-        ></p>
+        >
+          rq
+        </p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-2xl ">
@@ -53,7 +57,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-stone-800 rounded-md text-2xl w-52"
+            className="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-md text-2xl w-52"
           >
             <li onClick={() => handleNavigation(0)}>
               <p className={titleHoverStyle}>About</p>

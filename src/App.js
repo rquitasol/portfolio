@@ -80,6 +80,7 @@ const App = () => {
   return (
     <div className="app">
       <Header
+        isDesktop={isDesktop}
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
