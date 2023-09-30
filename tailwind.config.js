@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mova: ["mova", "sans"],
+        FuturaPTExtraBold: ["FuturaPTExtraBold", "sans"],
+        FuturaPTHeavy: ["FuturaPTHeavy", "sans"],
+        FuturaPTMedium: ["FuturaPTMedium", "sans"],
+        FuturaPTLight: ["FuturaPTLight", "sans"],
       },
 
       spacing: {

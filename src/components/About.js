@@ -19,13 +19,13 @@ const About = ({ isDesktop }) => {
     alert("TODO DOWNLOAD LINK OF RESUME");
   };
 
-  const buttonStyle = "btn bg-neutral text-base-100";
-  const keyWords = "font-extrabold underline decoration-secondary";
+  const buttonStyle = "btn bg-neutral text-base-100 font-FuturaPTMedium";
+  const keyWords = "font-FuturaPTExtraBold underline decoration-secondary";
 
   return (
     <div className="section">
       <div
-        className={`hero min-h-screen bg-primary`}
+        className={`hero min-h-screen bg-white`}
         style={{
           backgroundImage: `url(${pfp})`,
         }}
@@ -37,14 +37,15 @@ const About = ({ isDesktop }) => {
         >
           <div>
             <h1
-              className={` font-extrabold font-mova  uppercase 
+              className={` font-extrabold font-FuturaPTHeavy text-stone-600 uppercase text-
               ${isDesktop ? "header-desktop" : "header-mobile"}
               `}
             >
-              Hi, I'm Romel
+              Hi, I'm{" "}
+              <b className="text-primary font-FuturaPTExtraBold">Romel</b>
             </h1>
             <p
-              className={`py-6 font-medium  indent-8
+              className={`py-6 font-FuturaPTMedium  indent-8
              ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
             `}
             >

@@ -1,5 +1,4 @@
 import React from "react";
-import { Chrono } from "react-chrono";
 import "../style/Work.css";
 import salesforce from "../assets/work-icons/salesforce.png";
 import zennya from "../assets/work-icons/zennya.png";
@@ -108,46 +107,9 @@ const Work = ({ isDesktop }) => {
               isDesktop ? "pt-40" : "pt-20"
             }`}
           >
-            <h1 className=" text-6xl text-neutral font-extrabold pb-20 pl-10">
+            <h1 className=" text-6xl text-neutral font-FuturaPTHeavy pb-20 pl-10">
               Work Experience
             </h1>
-            {isDesktop ? (
-              <Chrono
-                items={items}
-                mode="HORIZONTAL"
-                cardWidth={350}
-                cardHeight={300}
-                contentDetailsHeight={100}
-                itemWidth={300}
-                enableOutline
-                showAllCardsHorizontal
-                timelinePointShape="square"
-                timelinePointDimension={70}
-                theme={theme}
-                fontSizes={fontSizes}
-                classNames={classNames}
-              >
-                {icons}
-              </Chrono>
-            ) : (
-              <Chrono
-                items={items}
-                mode="HORIZONTAL"
-                cardWidth={300}
-                cardHeight={300}
-                contentDetailsHeight={100}
-                itemWidth={300}
-                enableOutline
-                showSingle
-                timelinePointShape="square"
-                timelinePointDimension={40}
-                theme={theme}
-                fontSizes={fontSizes}
-                classNames={classNames}
-              >
-                {icons}
-              </Chrono>
-            )}
           </div>
         </div>
       </div>

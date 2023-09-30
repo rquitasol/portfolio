@@ -6,17 +6,15 @@ const Header = ({ activeSection, setActiveSection }) => {
     setActiveSection(sectionIndex);
   };
 
-  const titleHoverStyle = "hover:bg-base-300";
+  const titleHoverStyle = "hover:bg-primary";
 
   return (
-    <div className="navbar header bg-neutral opacity-90 font-mova ">
+    <div className="navbar header font-FuturaPTHeavy bg-neutral ">
       <div className="navbar-start">
         <p
           className="btn btn-ghost normal-case text-5xl ml-10 text-primary"
           onClick={() => handleNavigation(0)}
-        >
-          romelquitasol
-        </p>
+        ></p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-2xl ">
