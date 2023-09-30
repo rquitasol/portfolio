@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import linkedin from "../assets/linkedin.png";
-import github from "../assets/github.png";
+import twitter from "../assets/twitter.png";
 import emailjs from "emailjs-com";
 
 const Contact = ({ isDesktop }) => {
@@ -58,27 +58,28 @@ const Contact = ({ isDesktop }) => {
     window.open(websiteURL, "_blank");
   };
 
-  const redirectToGitHub = () => {
-    const websiteURL = "https://github.com/rquitasol";
+  const redirectToTwitter = () => {
+    const websiteURL = "https://twitter.com/ta_s0l";
     window.open(websiteURL, "_blank");
   };
 
-  const buttonStyle = "btn bg-primary text-base-100 mr-2";
+  const buttonStyle =
+    "btn bg-primary border-base-100 text-base-100 mr-2 px-5 font-FuturaPTMedium";
 
   return (
     <div className="section">
-      <div className="hero min-h-screen bg-primary text-secondary text-lg">
+      <div className="hero min-h-screen bg-neutral text-lg">
         <div className="hero-content flex-col lg:flex-row">
           <div className="text-center lg:text-left">
             <h1
-              className={`font-extrabold  ${
+              className={`font-FuturaPTHeavy text-base-200  ${
                 isDesktop ? "header-desktop" : "header-mobile"
               }`}
             >
               Send me a message!
             </h1>
             <p
-              className={`py-6 font-medium 
+              className={`py-6 font-FuturaPTMedium text-base-300
              ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
             `}
             >
@@ -89,9 +90,9 @@ const Contact = ({ isDesktop }) => {
               <img src={linkedin} alt="LinkedIn" className="w-6 h-6 mr-2" />
               LinkedIn
             </button>
-            <button className={buttonStyle} onClick={redirectToGitHub}>
-              <img src={github} alt="GitHub" className="w-6 h-6 mr-2" />
-              GitHub
+            <button className={buttonStyle} onClick={redirectToTwitter}>
+              <img src={twitter} alt="Twitter" className="w-6 h-6 mr-2" />
+              Twitter
             </button>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 text-black">
@@ -137,7 +138,7 @@ const Contact = ({ isDesktop }) => {
                   <textarea
                     className="textarea textarea-bordered w-full"
                     rows={isDesktop ? "5" : "3"}
-                    placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+                    placeholder="Hi, I think we need to have a conversation. How soon can you hop on to discuss this?"
                     id="message"
                     name="message"
                     value={formData.message}
@@ -145,7 +146,9 @@ const Contact = ({ isDesktop }) => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Send</button>
+                  <button className="btn bg-primary border-base-100 text-base-100 ">
+                    Send
+                  </button>
                 </div>
               </form>
             </div>
