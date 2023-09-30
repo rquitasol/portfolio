@@ -1,24 +1,20 @@
 import React from "react";
 import "../style/Header.css";
 
-const Header = ({ isDesktop, activeSection, setActiveSection }) => {
+const Header = ({ activeSection, setActiveSection }) => {
   const handleNavigation = (sectionIndex) => {
     setActiveSection(sectionIndex);
   };
 
-  const titleHoverStyle = "hover:bg-secondary";
+  const titleHoverStyle = "hover:bg-primary";
 
   return (
     <div className="navbar header font-FuturaPTHeavy bg-neutral ">
       <div className="navbar-start">
         <p
-          className={`btn btn-ghost normal-case text-5xl text-primary mb-5 font-FuturaPTExtraBold ${
-            isDesktop ? "ml-80" : "ml-5 "
-          } `}
+          className="btn btn-ghost normal-case text-5xl ml-10 text-primary"
           onClick={() => handleNavigation(0)}
-        >
-          rq
-        </p>
+        ></p>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-2xl ">
