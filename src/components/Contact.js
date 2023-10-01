@@ -146,7 +146,7 @@ const Contact = ({ isDesktop }) => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn bg-primary border-base-100 text-base-100 ">
+                  <button className="btn bg-primary border-base-100 text-base-100 font-FuturaPTMedium">
                     Send
                   </button>
                 </div>
