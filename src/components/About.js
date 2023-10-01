@@ -45,7 +45,7 @@ const About = ({ isDesktop }) => {
               <b className="text-primary font-FuturaPTExtraBold">Romel</b>
             </h1>
             <p
-              className={`py-6 font-FuturaPTMedium  indent-8
+              className={`py-6 font-FuturaPTMedium  indent-8 text-justify
              ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
             `}
             >
