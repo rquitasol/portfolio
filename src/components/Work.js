@@ -5,12 +5,20 @@ import WorkAccordion from "./WorkAccordion";
 const Work = ({ isDesktop }) => {
   const workDetails = [
     {
-      company: "Salesforce",
+      company: "BriskLabs.dev",
+      role: "Freelance Developer",
+      time: "March 2023 – Present",
+      stack: ["JavaScript", "React", "TailwindCss", "Firebase"],
+      description:
+        "Brisklabs.devs is a global collective of freelance developers who have been collaboratively creating mobile, web, and API backend applications since 2010. As a freelance developer, my primary focus was on the front-end development of Eazedine.",
+    },
+    {
+      company: "Vlocity",
       role: "Software Engineer",
       time: "October 2019 – March 2022",
       stack: ["Java", "Apex", "Salesforce", "SOQL", "Selenium"],
       description:
-        "In this role, I primarily developed significant features in response to the Product Manager's requests, focusing on meeting client expectations. I conducted feature demonstrations for feedback, addressed reported bugs, and actively participated in code reviews to ensure code quality. Additionally, I created Selenium automation tests, enhancing testing processes for improved product reliability and efficiency.",
+        "Vlocity is an industry cloud software company renowned for its deep domain expertise in vertical applications and modern cloud and mobile solutions. I primarily focused on developing significant features based on Product Manager requests, prioritizing client expectations. I also conducted feature demonstrations for feedback, addressed reported bugs, and actively participated in code reviews to ensure high code quality.  My contributions included creating Selenium automation tests to enhance testing processes, improving product reliability, and efficiency.",
     },
     {
       company: "Zennya",
@@ -18,7 +26,7 @@ const Work = ({ isDesktop }) => {
       time: "January 2019 - June 2019",
       stack: ["Java", "Grails", "MySQL", "MongoDB"],
       description:
-        "My responsibilities on this project included developing APIs for both mobile and web applications. I conducted research, documented, and implemented proof of concepts for potential new features. Additionally, I provided comprehensive documentation for newly created API endpoints and features. I actively participated in project meetings and ensured daily progress tracking in Jira.",
+        "Zennya is a provider of on-demand medical and wellness services through a mobile app, offering various healthcare services at home or in the office, including lab tests, Covid-19 swab tests, online doctor consultations, vaccination, and massage and physiotherapy services. As a software developer at Zennya, my responsibilities included developing APIs for both the mobile and web applications, conducting research, implementing proof of concepts for potential new features, creating comprehensive documentation for API endpoints and features, actively participating in project meetings, and ensuring daily progress tracking in Jira.",
     },
     {
       company: "GreatFeat Services Inc.",
@@ -53,15 +61,15 @@ const Work = ({ isDesktop }) => {
         "Oracle ADF",
       ],
       description:
-        "Responsibilities included developing customer-centric features, addressing bugs, and modifying code for new requirements. Providing technical support, guiding team members, and managing application releases were essential tasks. Additionally, duties encompassed web service development, team meetings, project understanding, and collaboration on data integration. In another role, projects were designed and implemented with Oracle ADF and WebLogic Server 11g, involving active participation in meetings and requirement gathering.",
+        "NTT is a global technology services leader specializing in intelligent solutions. As a software developer, I played a pivotal role, developing customer-centric features, addressing bugs, and managing application releases. Most of my responsibilities also included technical support, guiding team members, web service development, and collaboration on data integration. I contributed to projects involving Oracle ADF and WebLogic Server 11g, actively participating in meetings and requirement gathering, all within NTT  commitment to delivering data-driven, secure, and innovative technology solutions.",
     },
     {
       company: "Engage Outsourcing Inc.",
       role: "Quality Analyst/ Software Developer",
-      time: "October 2013 – May 2017",
+      time: "September 2012 – May 2013",
       stack: ["PHP", "MySQL", "jQuery", "CSS", "HTML", "Ajax"],
       description:
-        "Responsibilities included developing necessary stored procedures for the project, creating the administrator and reports modules, and actively participating in client team meetings to discuss requirements and timelines. Additionally, test cases were created and various project scenarios were tested thoroughly.",
+        "Engage Outsourcing is a company specializing in customer service, internet marketing, and technical support for clients in the financial, technology, and service sectors, my responsibilities included developing necessary stored procedures for the project, creating the administrator and reports modules, and actively participating in client team meetings to discuss requirements and timelines. Additionally, test cases were created and various project scenarios were tested thoroughly.",
     },
   ];
 

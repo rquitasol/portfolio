@@ -36,19 +36,21 @@ const WorkTab = ({ workDetails, isDesktop }) => {
             <div className="font-FuturaPTLight text-xl pb-5">
               {work.description}
             </div>
-            <div className="font-FuturaPTMedium text-lg">
-              Tech stack:
-              {work.stack.map((stack, stackIdx) => (
-                <div
-                  key={"stack_" + stackIdx}
-                  className="font-FuturaPTLight ml-10 mt-3"
-                >
-                  <b className="font-FuturaPTExtraBold text-secondary mr-4">
-                    +
-                  </b>
-                  {stack}
-                </div>
-              ))}
+            <div className="techstack font-FuturaPTMedium text-lg">
+              <div>Tech stack: </div>
+              <div className="flex flex-col flex-wrap  max-h-60">
+                {work.stack.map((stack, stackIdx) => (
+                  <div
+                    key={"stack_" + stackIdx}
+                    className="flex items-center font-FuturaPTLight ml-10 mt-3"
+                  >
+                    <b className="font-FuturaPTExtraBold text-secondary mr-4">
+                      +
+                    </b>
+                    {stack}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
