@@ -13,7 +13,7 @@ const WorkTab = ({ workDetails, isDesktop }) => {
     return (
       <div
         key={"tab_" + idx}
-        className={`p-9 border-secondary min-w-max text-left font-FuturaPTMedium text-base-200 text-2xl border-l-2  ${
+        className={`p-9 border-secondary min-w-max text-left font-FuturaPTMedium text-base-200 text-2xl border-l-2 hover:cursor-pointer hover:bg-secondary hover:text-neutral  ${
           activeTab === idx ? "tab-active border-b-2 text-secondary" : ""
         }   `}
         onClick={() => openTab(idx)}
