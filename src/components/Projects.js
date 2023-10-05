@@ -41,7 +41,7 @@ const Projects = ({ isDesktop }) => {
       <div className="card lg:card-side bg-base-100 text-neutral justify-center items-center px-10">
         <div
           className={`card-image ${
-            isDesktop ? `w-[40%]` : `max-w-[300px] max-h-[300px]`
+            isDesktop ? `w-[40%]` : `max-w-[250px] max-h-[250px]`
           } `}
         >
           <div className="mockup-browser border bg-base-300 ">
@@ -63,7 +63,11 @@ const Projects = ({ isDesktop }) => {
             {data.description}
           </div>
           <div className="text-left font-FuturaPTMedium">Tech stack: </div>
-          <div className="flex flex-col flex-wrap max-h-40">
+          <div
+            className={`flex flex-col flex-wrap ${
+              isDesktop ? " max-h-40" : " max-h-24"
+            }`}
+          >
             {data.stack.map((stack, stackIdx) => (
               <div
                 key={"stack_" + stackIdx}
