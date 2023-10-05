@@ -29,6 +29,10 @@
   background: #ffa559;
 }
 
-.carousel.carousel-slider .control-arrow {
-  color: #ffa559;
+.carousel .control-next.control-arrow:before {
+  border-left: 10px solid #ffa559;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 10px solid #ffa559;
 }
