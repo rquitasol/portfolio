@@ -3,6 +3,7 @@ import pfp from "../assets/pfp.png";
 import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import resume from "../assets/resume.png";
+import quitasol_resume from "../assets/quitasol_resume.pdf";
 
 const About = ({ isDesktop }) => {
   const redirectToLinkedIn = () => {
@@ -16,7 +17,10 @@ const About = ({ isDesktop }) => {
   };
 
   const downloadResume = () => {
-    alert("TODO DOWNLOAD LINK OF RESUME");
+    const link = document.createElement("a");
+    link.href = quitasol_resume;
+    link.download = "quitasol_resume.pdf";
+    link.click();
   };
 
   const buttonStyle = "btn bg-neutral text-base-100 font-FuturaPTMedium";
@@ -42,7 +46,7 @@ const About = ({ isDesktop }) => {
               `}
             >
               Hi, I'm{" "}
-              <b className="text-primary font-FuturaPTExtraBold">Romel</b>
+              <b className="text-secondary font-FuturaPTExtraBold">Romel</b>
             </h1>
             <p
               className={`py-6 font-FuturaPTMedium  indent-8 text-justify

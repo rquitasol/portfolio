@@ -24,3 +24,11 @@
   height: fit-content;
   display: flex;
 }
+
+.carousel .control-dots .dot {
+  background: #ffa559;
+}
+
+.carousel.carousel-slider .control-arrow {
+  color: #ffa559;
+}
