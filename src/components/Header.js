@@ -6,7 +6,7 @@ const Header = ({ activeSection, setActiveSection }) => {
     setActiveSection(sectionIndex);
   };
 
-  const titleHoverStyle = "hover:bg-primary";
+  const titleHoverStyle = "hover:bg-secondary";
 
   return (
     <div className="navbar header font-FuturaPTHeavy bg-neutral ">

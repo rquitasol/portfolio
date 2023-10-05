@@ -79,7 +79,7 @@ const Work = ({ isDesktop }) => {
         <div className="hero-content text-center">
           <div className="max-w-full">
             <h1
-              className={`font-FuturaPTHeavy text-secondary text-4xl  text-left ${
+              className={`font-FuturaPTHeavy text-secondary text-4xl  text-center ${
                 isDesktop ? "header-desktop pb-10" : "header-mobile pb-3"
               }`}
             >
