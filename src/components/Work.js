@@ -13,7 +13,15 @@ const Work = ({ isDesktop }) => {
         "Brisklabs.devs is a global collective of freelance developers who have been collaboratively creating mobile, web, and API backend applications since 2010. As a freelance developer, my primary focus was on the front-end development of Eazedine.",
     },
     {
-      company: "Vlocity",
+      company: "Nodies",
+      role: "Senior Applications Developer",
+      time: "December 2023 – Auguest 2024",
+      stack: ["Golang", "Blockchain", "InfluxDB", "PostgreSQL", "Grafana", "JavaScript", "React"],
+      description:
+        "Nodies is a provider for web3 infrastructure services such as RPC endpoints, crosschain data lakes, blockchain data hosting.",
+    },
+    {
+      company: "iScale Solutions",
       role: "Software Engineer",
       time: "October 2019 – March 2022",
       stack: ["Java", "Apex", "Salesforce", "SOQL", "Selenium"],
