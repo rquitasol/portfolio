@@ -24,7 +24,7 @@ const About = ({ isDesktop }) => {
   };
 
   const buttonStyle = "btn bg-neutral text-base-100 font-FuturaPTMedium";
-  const keyWords = "font-FuturaPTExtraBold underline decoration-secondary";
+  const keyWords = "font-FuturaPTExtraBold decoration-secondary";
 
   return (
     <div className="section">
@@ -49,24 +49,26 @@ const About = ({ isDesktop }) => {
               <b className="text-secondary font-FuturaPTExtraBold">Romel</b>
             </h1>
             <p
-              className={`py-6 font-FuturaPTMedium  indent-8 text-justify
-             ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
-            `}
+              className={`py-6 font-FuturaPTMedium indent-8 text-left leading-relaxed
+                ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
+              `}
             >
-              I am a Full Stack Developer based in the Philippines with
-              extensive experience in programming languages and tools such as
-              <b className={keyWords}> Java</b>,
+              I am a Software Engineer specializing in Full Stack Development,
+              based in the Philippines, with extensive experience in programming
+              languages and tools such as <b className={keyWords}> Java</b>,
+              <b className={keyWords}> Golang</b>,
               <b className={keyWords}> JavaScript</b>,
               <b className={keyWords}> Apex</b>,<b className={keyWords}> CSS</b>
-              ,<b className={keyWords}> HTML </b>
-              and more. Over the years, I have had the privilege of working on
-              applications across various industries, including Finance, Online
-              Gaming, Health and Wellness, Customer Relationship Management.
-              These diverse experiences have allowed me to collaborate with both
-              small and large companies, fostering a rich cross-cultural
-              environment. I am actively seeking a new role as a developer to
-              further expand my skills and contribute to exciting projects.
+              ,<b className={keyWords}> HTML</b>, and more. Over the years, I
+              have had the privilege of working on applications across various
+              industries, including Blockchain, Finance, Online Gaming, Health
+              and Wellness, and Customer Relationship Management. These diverse
+              experiences have enabled me to collaborate with both small and
+              large companies, fostering a rich cross-cultural environment. I am
+              actively seeking a new role as a developer to further expand my
+              skills and contribute to exciting projects.
             </p>
+
             {isDesktop ? (
               <>
                 <button className={buttonStyle} onClick={redirectToLinkedIn}>
