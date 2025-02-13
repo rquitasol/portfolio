@@ -24,10 +24,10 @@ const Header = ({ activeSection, setActiveSection }) => {
           <li className="px-5" onClick={() => handleNavigation(1)}>
             <p className={titleHoverStyle}>Work</p>
           </li>
-          <li className="px-5" onClick={() => handleNavigation(2)}>
+          {/* <li className="px-5" onClick={() => handleNavigation(2)}>
             <p className={titleHoverStyle}>Projects</p>
-          </li>
-          <li className="px-5" onClick={() => handleNavigation(3)}>
+          </li> */}
+          <li className="px-5" onClick={() => handleNavigation(2)}>
             <p className={titleHoverStyle}>Contact</p>
           </li>
         </ul>

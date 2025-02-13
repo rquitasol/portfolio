@@ -68,18 +68,18 @@ const Contact = ({ isDesktop }) => {
 
   return (
     <div className="section">
-      <div className="hero min-h-screen bg-neutral text-lg">
+      <div className="hero min-h-screen bg-white text-lg">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left ">
             <h1
-              className={`font-FuturaPTHeavy text-base-200 text-4xl  ${
+              className={`font-FuturaPTHeavy text-stone-600 text-4xl  ${
                 isDesktop ? "header-desktop" : "header-mobile"
               }`}
             >
               Send me a message!
             </h1>
             <p
-              className={`py-6 font-FuturaPTMedium text-base-300
+              className={`py-6 font-FuturaPTMedium 
              ${isDesktop ? "paragraph-desktop" : "paragraph-mobile"}
             `}
             >

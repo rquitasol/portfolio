@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import About from "./components/About";
 import Work from "./components/Work";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { useMediaQuery } from "react-responsive";
 
@@ -12,7 +12,7 @@ const App = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
-  const numSections = 4;
+  const numSections = 3;
   const sectionHeight = 100;
   const scrollDelay = 500;
   let touchStartY;
@@ -20,8 +20,8 @@ const App = () => {
   const sections = [
     <About key={1} isDesktop={isDesktop} />,
     <Work key={2} isDesktop={isDesktop} />,
-    <Projects key={3} isDesktop={isDesktop} />,
-    <Contact key={4} isDesktop={isDesktop} />,
+    // <Projects key={3} isDesktop={isDesktop} />,
+    <Contact key={3} isDesktop={isDesktop} />,
   ];
 
   const handleScroll = (event) => {
